@@ -43,13 +43,12 @@ public class Pantalla extends javax.swing.JFrame {
             @Override
             public void run() {
                 try {
-                   // int veces = (int) (Math.random() * 15) + 1;
+                    int veces = (int) (Math.random() * 20) + 1;
                     
-                    for (int i = 0; i < 100; i++) {
+                    for (int i = 0; i <= veces; i++) {
 
                         int random = (int) (Math.random() * 5) + 1;
-                        System.out.println(random);
-
+                        
                         switch (random) {
                             case 1:
                                 pantalla.King.setVisible(true);
@@ -68,9 +67,12 @@ public class Pantalla extends javax.swing.JFrame {
                                 break;
                         }
 
-                        Thread.sleep(200);
-
-                        pantalla.setToFalse(pantalla);
+                        Thread.sleep(300);
+                        if (i==veces) {
+                        
+                        }    
+                        else {
+                        pantalla.setToFalse(pantalla);}
                     }
                 } catch (InterruptedException e) {
                 }
